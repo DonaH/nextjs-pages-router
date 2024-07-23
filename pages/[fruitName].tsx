@@ -43,7 +43,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 		props: {
 			fruit: {
 				...fruit,
-				imageUrl: fruit.imageUrl.replace("q=100", "q=80"),
+				imageUrl: fruit.imageUrl.replace("q=80", "q=60"),
 			},
 		},
 	};
