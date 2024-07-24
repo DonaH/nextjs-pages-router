@@ -29,7 +29,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
 	const response = await fetch(`http://localhost:3000/api/fruit`);
 	const data = await response.json();
-	console.log('data:', data)
 	const fruits = data.fruits;
 	const fruit = fruits.find((f: any) => f.name.toLowerCase() === fruitName?.toString().toLowerCase());
 
