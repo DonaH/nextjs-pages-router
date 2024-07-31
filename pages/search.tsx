@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
+import { useRouter } from 'next/router';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,6 +17,7 @@ export default function SearchFruits() {
   const [searchTerm, setSearchTerm] = useState('');
   const [fruits, setFruits] = useState<Fruit[]>([]);
   const [filteredFruits, setFilteredFruits] = useState<Fruit[]>([]);
+  const router = useRouter();
 
   useEffect(() => {
     fetch('/api/fruit')
@@ -34,6 +36,10 @@ export default function SearchFruits() {
       fruit.name.toLowerCase().includes(term)
     );
     setFilteredFruits(filtered);
+  };
+
+  const handleFruitClick = (fruitName: string) => {
+    router.push(`/${fruitName}`);
   };
 
   return (
@@ -57,7 +63,12 @@ export default function SearchFruits() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredFruits.map((fruit, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div 
+              key={index} 
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+              style={{ cursor: 'pointer' }}
+              onClick={() => handleFruitClick(fruit.name)}
+            >
               <div className="relative h-48">
                 <Image
                   src={fruit.imageUrl}
