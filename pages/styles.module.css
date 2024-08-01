@@ -1,0 +1,38 @@
+/* styles.module.css */
+.fruitCard {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.fruitCardImage {
+  position: relative;
+  height: 12rem; /* 48px */
+}
+
+.fruitCardContent {
+  padding: 1rem; /* 16px */
+  text-transform: capitalize;
+}
+
+.fruitCardTitle {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+  color: #4a5568; /* gray-600 */
+  margin-bottom: 0.5rem; /* 8px */
+}
+
+.fruitCardSubtitle {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  color: #4a5568; /* gray-600 */
+  margin-bottom: 0.5rem; /* 8px */
+}
+
+.fruitCardText {
+  font-size: 0.875rem; /* 14px */
+  color: #4a5568; /* gray-600 */
+  margin-bottom: 0.5rem; /* 8px */
+}
