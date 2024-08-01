@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import { useRouter } from 'next/router';
+import styles from './styles.module.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -77,10 +78,10 @@ export default function SearchFruits() {
                   objectFit="cover"
                 />
               </div>
-              <div className="p-4 capitalize">
-                <h2 className="text-xl font-semibold text-gray-600 mb-2">{fruit.name}</h2>
-                <p className="text-sm text-gray-600 mb-2">Season: {fruit.season}</p>
-                <p className="text-sm text-gray-600 mb-2">{fruit.description}</p>
+              <div className={styles.fruitCardContent}>
+                <h2 className={styles.fruitCardTitle}>{fruit.name}</h2>
+                <p className={styles.fruitCardSubtitle}>Season: {fruit.season}</p>
+                <p className={styles.fruitCardText}>{fruit.description}</p>
               </div>
             </div>
           ))}

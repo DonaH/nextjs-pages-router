@@ -26,6 +26,16 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      #f4f6db
+    )
+    #abaf00;
+} */
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
