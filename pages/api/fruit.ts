@@ -40,12 +40,12 @@ export default function handler(
         description: "Sweet and fragrant, strawberries are a favorite for desserts.",
         imageUrl: "https://images.unsplash.com/photo-1543528176-61b239494933?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3RyYXdiZXJyaWVzfGVufDB8MHwwfHx8MA%3D%3D"
       },
-      {
-        name: "pear_1",
-        season: "winter",
-        description: "pears are elegant, fiber-rich fruits that boast a range of colors, a gentle sweetness, and a refreshing, subtle graininess.",
-        imageUrl: "https://images.unsplash.com/photo-1570115114436-63d3405246e7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHNpbmdsZSUyMHBlYXJ8ZW58MHx8MHx8fDA%3D"
-      },
+      // {
+      //   name: "pear_1",
+      //   season: "winter",
+      //   description: "pears are elegant, fiber-rich fruits that boast a range of colors, a gentle sweetness, and a refreshing, subtle graininess.",
+      //   imageUrl: "https://images.unsplash.com/photo-1570115114436-63d3405246e7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHNpbmdsZSUyMHBlYXJ8ZW58MHx8MHx8fDA%3D"
+      // },
       {
         name: "pear_2",
         season: "winter",

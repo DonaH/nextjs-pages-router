@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import { useRouter } from 'next/router';
 import styles from './styles.module.css';
+import { useRecentlySearchedContext } from '@/contexts/RecentlySearchedContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,6 +20,7 @@ export default function SearchFruits() {
   const [fruits, setFruits] = useState<Fruit[]>([]);
   const [filteredFruits, setFilteredFruits] = useState<Fruit[]>([]);
   const router = useRouter();
+  const { searchTerms, addSearchTerm } = useRecentlySearchedContext();
 
   useEffect(() => {
     fetch('/api/fruit')
@@ -40,6 +42,7 @@ export default function SearchFruits() {
   };
 
   const handleFruitClick = (fruitName: string) => {
+    addSearchTerm(fruitName);
     router.push(`/${fruitName}`);
   };
 
@@ -86,6 +89,16 @@ export default function SearchFruits() {
             </div>
           ))}
         </div>
+
+        <div className="mt-8">
+          <h2 className="text-2xl font-bold text-center mb-4">Recently Searched Fruits</h2>
+          <ul className="list-disc list-inside">
+            {searchTerms.map((term, index) => (
+              <li key={index} className="text-center">{term}</li>
+            ))}
+          </ul>
+        </div>
+
     </div>
     </main>
   );

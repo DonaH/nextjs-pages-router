@@ -2,14 +2,18 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styled from "styled-components";
 import { ThemedButton } from "@/components/ThemedButton";
+import { useEffect } from "react";
 
 const StyledDiv = styled.div`
-color: lightblue;
+color: yellow;
 `;
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  // useEffect(() => {
+  //   localStorage.clear();
+  // }, []);
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
@@ -20,7 +24,7 @@ export default function Home() {
           <code className="font-mono font-bold">pages/index.tsx</code>
         </p>
         <ThemedButton />
-        
+
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
           <a
             className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
@@ -52,7 +56,7 @@ export default function Home() {
         />
       </div>
       <StyledDiv>
-        <h1 style={{fontSize: "1.5rem"}}>React Training</h1>
+        <h1 style={{fontSize: "1.6rem"}}>React Training</h1>
       </StyledDiv>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
@@ -74,19 +78,17 @@ export default function Home() {
         </a>
 
         <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
+          href="/recentlySearched"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
+            Recently Searched{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+            Recently searched fruits.
           </p>
         </a>
 
@@ -110,8 +112,6 @@ export default function Home() {
         <a
           href="/search"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
             Search{" "}
